@@ -11,6 +11,7 @@ Update Minh:
 Day 29/8: Build test VueJs and running jwt by laravel
 link fe: https://github.com/trinhhoangminh200401/jwt-vue-ui
 link be: https://github.com/trinhhoangminh200401/jwt-laravel
+
 Project authentication advance with device
    31/8:Done feature register, login with jwt (sendmail) 
    <img width="1593" height="830" alt="image" src="https://github.com/user-attachments/assets/8b56bae8-ebdc-485b-8aa0-2d53ea59982c" />
