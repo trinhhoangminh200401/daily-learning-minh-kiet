@@ -29,4 +29,6 @@ Update 1/9
    Topic Length of last world -> Idea is described in file code you can see in directly file
 
 
+Update 31/08 at 21:43
+Day 3: DSA with topic Stack -> valid_parentheses
 
