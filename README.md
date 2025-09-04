@@ -21,6 +21,12 @@ Project authentication advance with device
   <img width="1505" height="851" alt="image" src="https://github.com/user-attachments/assets/274fa697-ded3-44d1-b7ab-eaa255811db5" />
   <img width="1611" height="871" alt="image" src="https://github.com/user-attachments/assets/4643909b-663d-4122-8523-5d5d1ec515ee" />
   <img width="1815" height="922" alt="image" src="https://github.com/user-attachments/assets/cfbe41ca-2d5a-4459-8764-66fb49716a76" />
+ 
+   4/9: Update register, link when expire_times if link is expire_time can't verified, and can be re register 
+
+  <img width="1547" height="846" alt="image" src="https://github.com/user-attachments/assets/201fc501-4497-4254-84aa-c4725e3f4227" />
+  
+
 
 Update 1/9 
    
@@ -31,4 +37,6 @@ Update 1/9
 
 Update 31/08 at 21:43
 Day 3: DSA with topic Stack -> valid_parentheses
+
+
 
