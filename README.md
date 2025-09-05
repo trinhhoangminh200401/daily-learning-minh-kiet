@@ -38,5 +38,6 @@ Update 1/9
 Update 31/08 at 21:43
 Day 3: DSA with topic Stack -> valid_parentheses
 
-
+Update 5/9 at 19:54
+Day 4: Linked List and kubernet
 
