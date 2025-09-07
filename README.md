@@ -41,3 +41,6 @@ Day 3: DSA with topic Stack -> valid_parentheses
 Update 5/9 at 19:54
 Day 4: Linked List and kubernet
 
+Update 7/9 at 23:13
+Day 5: Learning with Khuong about AWS
+
