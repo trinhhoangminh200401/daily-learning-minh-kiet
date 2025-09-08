@@ -44,3 +44,6 @@ Day 4: Linked List and kubernet
 Update 7/9 at 23:13
 Day 5: Learning with Khuong about AWS
 
+Update 8/9 
+  Leet-code: Problem 69
+ Topic custom sqrt -> without using available method 
