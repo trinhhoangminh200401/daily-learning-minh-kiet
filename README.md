@@ -46,3 +46,6 @@ Day 5: Learning with Khuong about AWS page 1
 
 Update 8/9 at 9:15
 Day 6: Learning AWS page 2
+Update 8/9 
+  Leet-code: Problem 69
+ Topic custom sqrt -> without using available method 
