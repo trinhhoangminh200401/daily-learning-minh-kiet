@@ -42,5 +42,7 @@ Update 5/9 at 19:54
 Day 4: Linked List and kubernet
 
 Update 7/9 at 23:13
-Day 5: Learning with Khuong about AWS
+Day 5: Learning with Khuong about AWS page 1
 
+Update 8/9 at 9:15
+Day 6: Learning AWS page 2
