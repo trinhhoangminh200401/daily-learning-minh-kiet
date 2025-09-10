@@ -52,3 +52,6 @@ Update 8/9
 
 update 9/9
 stack_array
+
+update 10/9
+stack_linkedlist
