@@ -49,3 +49,6 @@ Day 6: Learning AWS page 2
 Update 8/9 
   Leet-code: Problem 69
  Topic custom sqrt -> without using available method 
+
+update 9/9
+stack_array
