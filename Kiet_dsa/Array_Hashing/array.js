@@ -40,6 +40,7 @@ const countOcurrences = (arr, x) => {
     return count
     // return arr.filter(num => num === x).length
 }
+ 
 const findMax = (arr) => {
     let max = 0
     for(let num of arr){
