@@ -55,3 +55,11 @@ stack_array
 
 update 10/9
 stack_linkedlist
+
+update 11/9 -> 14/9
+learn AWS
+work with Array
+dsa roadmap link: https://neetcode.io/
+
+Update 15/09
+Work with Array
