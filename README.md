@@ -67,3 +67,6 @@ Work with Array
 update 17/09
 Work with array: second largest and third largest -> not optimized yet
 work with array: reverse and two sum (optimized)
+
+update 18/09
+work with array: reverse a group of given size
