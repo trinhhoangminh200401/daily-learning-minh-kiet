@@ -63,3 +63,6 @@ dsa roadmap link: https://neetcode.io/
 
 Update 15/09
 Work with Array
+
+update 17/09
+Work with array: second largest and third largest -> not optimized yet
