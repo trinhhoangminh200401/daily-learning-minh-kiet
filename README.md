@@ -70,3 +70,6 @@ work with array: reverse and two sum (optimized)
 
 update 18/09
 work with array: reverse a group of given size
+
+udate 03/12
+Start again 
