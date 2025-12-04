@@ -74,3 +74,6 @@ work with array: reverse a group of given size
 update 03/12
 Start again 
 Two_pointers definition and two sum, learn the basic
+
+update 04/12
+Work with two pointers: remove duplicates and reverse string keep space
