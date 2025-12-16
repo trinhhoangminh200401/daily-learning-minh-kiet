@@ -77,3 +77,9 @@ Two_pointers definition and two sum, learn the basic
 
 update 04/12
 Work with two pointers: remove duplicates and reverse string keep space
+
+update 15/12
+Learn C++ and keep working on DSA
+
+update 16/12
+convert numb to string and make all equals
