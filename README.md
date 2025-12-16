@@ -83,3 +83,5 @@ Learn C++ and keep working on DSA
 
 update 16/12
 convert numb to string and make all equals
+minimum cost
+=> End of basic problem. Now move to Easy Problem @@
