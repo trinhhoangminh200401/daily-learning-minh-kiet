@@ -40,3 +40,4 @@ const bottomUp = (n) => {
 console.log(bottomUp(6))
 
 // Using matrix - O(n) log n time and O(log n) space
+// this is the hardest one so make it later on
