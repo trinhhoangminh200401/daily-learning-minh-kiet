@@ -88,3 +88,5 @@ minimum cost
 
 update 23/12
 duplicate within K distance
+even position in array
+fibonaci trong quy hoạch động
