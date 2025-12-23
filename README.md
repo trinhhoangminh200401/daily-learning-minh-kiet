@@ -85,3 +85,6 @@ update 16/12
 convert numb to string and make all equals
 minimum cost
 => End of basic problem. Now move to Easy Problem @@
+
+update 23/12
+duplicate within K distance
