@@ -3,11 +3,11 @@
 
 import React from 'react'
 
-const hello = () => {
+const Hello = () => {
     console.log('I am a client component')
   return (
     <div>hello</div>
   )
 }
 
-export default hello
+export default Hello

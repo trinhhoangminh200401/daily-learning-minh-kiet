@@ -90,3 +90,10 @@ update 23/12
 duplicate within K distance
 even position in array
 fibonaci trong quy hoạch động
+
+update 24/12
+learn frontend nextjs
+SEO
+Routing
+Client-component vs Server-component
+Serverside re-rendering
