@@ -97,3 +97,9 @@ SEO
 Routing
 Client-component vs Server-component
 Serverside re-rendering
+
+update 26/12
+do exercises about OOP
+
+update 28/12
+linklist, tree, dynamic program in fibonacci file

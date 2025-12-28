@@ -41,3 +41,15 @@ console.log(bottomUp(6))
 
 // Using matrix - O(n) log n time and O(log n) space
 // this is the hardest one so make it later on
+
+const climbStair = (n) => {
+    let memo = {}
+    if(n<=1) return 1
+    if(n in memo) return memo[n]
+    memo[n] = climbStair(n-1) + climbStair(n-2)
+    return memo[n] 
+}
+console.log(climbStair(2))
+console.log(climbStair(3))
+console.log(climbStair(4))
+console.log(climbStair(5))
