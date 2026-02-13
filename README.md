@@ -103,3 +103,7 @@ do exercises about OOP
 
 update 28/12
 linklist, tree, dynamic program in fibonacci file
+
+update 13/02/2026
+monorepo - turbo
+nextjs - prisma

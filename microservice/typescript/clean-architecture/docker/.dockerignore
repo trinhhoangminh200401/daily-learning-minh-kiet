@@ -1,0 +1,55 @@
+# ========================================
+# DOCKER IGNORE
+# Files to exclude from Docker builds
+# Docs: https://docs.docker.com/engine/reference/builder/#dockerignore-file
+# ========================================
+
+# Git
+.git
+.gitignore
+
+# Dependencies (will be installed in container)
+node_modules
+
+# Build output (will be built in container)
+dist
+build
+
+# Environment files (pass via docker-compose/secrets)
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Testing
+coverage
+.nyc_output
+*.test.ts
+*.spec.ts
+__tests__
+
+# Docker files (don't need to copy docker files into docker image)
+docker
+docker-compose*.yml
+Dockerfile*
+
+# Documentation
+*.md
+docs
+
+# Local data
+data
+
+# OS files
+.DS_Store
+Thumbs.db

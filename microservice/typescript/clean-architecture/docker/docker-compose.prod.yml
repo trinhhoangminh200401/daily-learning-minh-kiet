@@ -1,0 +1,164 @@
+# ========================================
+# DOCKER COMPOSE - PRODUCTION
+# Run: docker-compose -f docker/docker-compose.prod.yml up -d
+# Docs: https://docs.docker.com/compose/production/
+# ========================================
+
+version: '3.8'
+
+services:
+  # ========================================
+  # MONGODB - User Data Store
+  # ========================================
+  mongodb:
+    image: mongo:7
+    container_name: prod_mongodb
+    restart: always
+    ports:
+      - "127.0.0.1:27017:27017"  # Only accessible from localhost
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGODB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGODB_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGODB_DB}
+    volumes:
+      - mongodb_data:/data/db
+      - mongodb_config:/data/configdb
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - prod_network
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+  # ========================================
+  # POSTGRESQL - Product Data Store
+  # ========================================
+  postgres:
+    image: postgres:16
+    container_name: prod_postgres
+    restart: always
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    networks:
+      - prod_network
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+  # ========================================
+  # REDIS - Cache & Session Store
+  # ========================================
+  redis:
+    image: redis:7-alpine
+    container_name: prod_redis
+    restart: always
+    ports:
+      - "127.0.0.1:6379:6379"
+    command: >
+      redis-server 
+      --appendonly yes 
+      --requirepass ${REDIS_PASSWORD}
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "--no-auth-warning", "-a", "${REDIS_PASSWORD}", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+    networks:
+      - prod_network
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.25'
+          memory: 256M
+
+  # ========================================
+  # APPLICATION (Uncomment when ready)
+  # ========================================
+  # app:
+  #   build:
+  #     context: ..
+  #     dockerfile: docker/Dockerfile
+  #   container_name: prod_app
+  #   restart: always
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     NODE_ENV: production
+  #     DATABASE_TYPE: postgres
+  #     POSTGRES_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+  #     MONGODB_URL: mongodb://${MONGODB_USER}:${MONGODB_PASSWORD}@mongodb:27017/${MONGODB_DB}?authSource=admin
+  #     REDIS_URL: redis://:${REDIS_PASSWORD}@redis:6379
+  #     JWT_SECRET: ${JWT_SECRET}
+  #   depends_on:
+  #     mongodb:
+  #       condition: service_healthy
+  #     postgres:
+  #       condition: service_healthy
+  #     redis:
+  #       condition: service_healthy
+  #   networks:
+  #     - prod_network
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         cpus: '1'
+  #         memory: 512M
+  #       reservations:
+  #         cpus: '0.5'
+  #         memory: 256M
+
+# ========================================
+# NETWORKS
+# ========================================
+networks:
+  prod_network:
+    driver: bridge
+    name: prod_network
+
+# ========================================
+# VOLUMES - Persistent Data Storage
+# ========================================
+volumes:
+  mongodb_data:
+    name: prod_mongodb_data
+  mongodb_config:
+    name: prod_mongodb_config
+  postgres_data:
+    name: prod_postgres_data
+  redis_data:
+    name: prod_redis_data

@@ -1,0 +1,96 @@
+# ========================================
+# GITIGNORE FOR NODE.JS + TYPESCRIPT
+# Based on: https://github.com/github/gitignore/blob/main/Node.gitignore
+# ========================================
+
+# ========================================
+# DEPENDENCIES
+# ========================================
+node_modules/
+.pnp
+.pnp.js
+
+# ========================================
+# BUILD OUTPUT
+# ========================================
+dist/
+build/
+out/
+*.js.map
+
+# ========================================
+# ENVIRONMENT FILES (SENSITIVE!)
+# ========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Keep .env.example in version control
+!.env.example
+
+# ========================================
+# LOGS
+# ========================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ========================================
+# TESTING & COVERAGE
+# ========================================
+coverage/
+.nyc_output/
+*.lcov
+
+# ========================================
+# IDE & EDITORS
+# ========================================
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ========================================
+# DOCKER
+# ========================================
+# .docker-compose.override.yml is local only
+docker-compose.override.yml
+
+# ========================================
+# MISC
+# ========================================
+.cache/
+.temp/
+.tmp/
+*.tsbuildinfo
+
+# ========================================
+# OS GENERATED FILES
+# ========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ========================================
+# DATABASE FILES (LOCAL)
+# ========================================
+*.sqlite
+*.sqlite3
+*.db
+data/

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+
+  --color-primary: #0A192F;
+  --color-primary-foreground: #ffffff;
+  
+  --color-accent: #D4AF37;
+  --color-accent-foreground: #0A192F;
+
+  --color-secondary: #f1f5f9;
+  --color-secondary-foreground: #0f172a;
+  
+  --color-muted: #64748b;
+  --color-muted-foreground: #94a3b8;
+}
+
+/* Base styles for smooth typography */
+body {
+  font-family: var(--font-sans);
+  background-color: white;
+  color: var(--color-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
