@@ -1,0 +1,55 @@
+{
+  "name": "@org/web",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "nx": {
+    "targets": {
+      "serve": {
+        "continuous": true,
+        "executor": "@nx/next:server",
+        "defaultConfiguration": "development",
+        "options": {
+          "buildTarget": "@org/web:build",
+          "dev": true
+        },
+        "configurations": {
+          "development": {
+            "buildTarget": "@org/web:build:development",
+            "dev": true
+          },
+          "production": {
+            "buildTarget": "@org/web:build:production",
+            "dev": false
+          }
+        }
+      },
+      "build": {
+        "executor": "@nx/next:build",
+        "outputs": [
+          "{workspaceRoot}/packages/web/.next"
+        ],
+        "options": {
+          "root": "packages/web"
+        },
+        "configurations": {
+          "development": {
+            "outputPath": "packages/web/.next"
+          },
+          "production": {
+            "outputPath": "packages/web/.next"
+          }
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "next": "~16.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
