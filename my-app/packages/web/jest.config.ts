@@ -1,4 +1,4 @@
-const nextJest = require('next/jest.js');
+import nextJest from 'next/jest.js';
 
 const createJestConfig = nextJest({
   dir: './',
@@ -6,13 +6,13 @@ const createJestConfig = nextJest({
 
 const config = {
   displayName: '@org/web',
-  preset: '../../../jest.preset.js',
+  preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nx/react/plugins/jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../coverage/packages/frontend/web',
+  coverageDirectory: '../../coverage/packages/web',
   testEnvironment: 'jsdom',
 };
 
-module.exports = createJestConfig(config);
+export default createJestConfig(config);

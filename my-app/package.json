@@ -3,6 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "dev": "nx run-many -t serve --all",
+    "affected:serve": "nx affected:serve",
+    "affected:build": "nx affected:build",
+    "affected:test": "nx affected:test",
+    "affected:lint": "nx affected:lint",
+    "build": "nx run-many -t build --all",
+    "test": "nx run-many -t test --all",
     "db:up": "docker-compose up -d",
     "db:down": "docker-compose down",
     "db:logs": "docker logs my-app-db"
